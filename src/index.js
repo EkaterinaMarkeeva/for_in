@@ -1,6 +1,7 @@
 export default function sortData(obj, arg) {
   const result = [];
-  let keys = Object.keys(obj).sort();
+  const copyObj = { ...obj };
+  let keys = Object.keys(copyObj).sort();
   
   for (let key in arg) {
     result.push({key: arg[key], value: obj[arg[key]]});
